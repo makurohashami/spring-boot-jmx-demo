@@ -1,0 +1,15 @@
+spring.application.name: jmx-client
+
+springdoc:
+  open-api:
+    info:
+      title: JMX Client App
+
+jmx:
+  remote:
+    host: 127.0.0.1
+    port: 9010
+
+serverServiceMBean:
+  name: com.makurohashami.jmxserver.jmx:name=serverServiceMBean,type=ServerServiceMBean
+  client: proxy # or manual

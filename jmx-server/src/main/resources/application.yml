@@ -1,0 +1,18 @@
+spring:
+  application.name: jmx-server
+  datasource:
+    url: jdbc:h2:mem:jmx_server_db
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+    hikari:
+      pool-name: jmx-server-db-pool
+      #Enable connection pool management via jmx
+      register-mbeans: true
+
+management:
+  endpoints:
+    ##Enables export all actuator endpoints to JMX
+    jmx.exposure.include: "*"
+  #Enables export metrics to jmx
+  jmx.metrics.export.enabled: true
